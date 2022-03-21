@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital@1&display=swap");
+body {
+  font-size: 18px;
+  background: #0f1424;
+  margin: 0;
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #fff;
+  font-family: 'Rubik'; }
+
+main {
+  min-height: 740px;
+  max-width: 1440px;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-rows: repeat(auto);
+  grid-template-columns: repeat(4, 1fr); }
+
+.Work {
+  background: #ff8c66; }
+
+.Play {
+  background: #56c2e6; }
+
+.Study {
+  background: #ff5c7c; }
+
+.Exercise {
+  background: #4acf81; }
+
+.Social {
+  background: #7536d3; }
+
+.Self, .Care {
+  background: #f1c65b; }
+
+.card_user {
+  border-radius: 1em;
+  background: #1c1f4a;
+  height: 740px;
+  min-width: 325px;
+  grid-row-start: 1;
+  grid-row-end: 3; }
+  .card_user .card_user__name {
+    background: #6f76c8;
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1em;
+    padding: 1rem 0;
+    height: 60%; }
+    .card_user .card_user__name img {
+      border: 5px solid #fff;
+      border-radius: 50%;
+      width: 90px;
+      margin: 2rem; }
+    .card_user .card_user__name h3 {
+      margin: 0 2rem;
+      font-size: 4rem;
+      font-weight: 200;
+      opacity: .7; }
+    .card_user .card_user__name span {
+      margin: 0 2rem;
+      font-size: 1.5rem;
+      opacity: .7;
+      text-transform: lowercase; }
+  .card_user .card_user__frecuency {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: space-evenly;
+    height: 40%; }
+    .card_user .card_user__frecuency span {
+      opacity: .7;
+      font-size: 2rem;
+      margin: 0rem 0 2.5rem 3rem;
+      display: block; }
+    .card_user .card_user__frecuency span:hover {
+      opacity: 1;
+      cursor: pointer; }
+    .card_user .card_user__frecuency .active {
+      opacity: 1;
+      color: aquamarine; }
+
+.bg_card_icon {
+  height: 350px;
+  width: 100%;
+  min-width: 325px;
+  border-radius: 1em;
+  position: relative;
+  overflow: hidden;
+  z-index: 3;
+  padding-top: .5rem; }
+  .bg_card_icon > img {
+    position: absolute;
+    right: 1rem;
+    top: -.5rem;
+    z-index: -1; }
+  .bg_card_icon .card_do {
+    z-index: 1;
+    margin-top: 2rem;
+    border-radius: 1em;
+    background: #1c1f4a;
+    padding: 1.5rem 2rem;
+    height: 78%; }
+    .bg_card_icon .card_do .card_do__options {
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+      .bg_card_icon .card_do .card_do__options span {
+        font-size: 2rem; }
+      .bg_card_icon .card_do .card_do__options img:hover {
+        cursor: pointer; }
+    .bg_card_icon .card_do .card_do__hrs-frecuency {
+      display: flex;
+      flex-direction: column;
+      align-items: left;
+      justify-content: space-between;
+      height: 70px; }
+      .bg_card_icon .card_do .card_do__hrs-frecuency h1 {
+        margin: 1rem 0;
+        font-weight: 50;
+        font-size: 6rem; }
+      .bg_card_icon .card_do .card_do__hrs-frecuency span {
+        font-size: 1.5rem;
+        opacity: .9; }
+  .bg_card_icon :hover {
+    background: #6f76c8; }
+
+@media (max-width: 1440px) {
+  main {
+    width: 90%;
+    grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 1125px) {
+  main {
+    width: 90%;
+    grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 800px) {
+  main {
+    width: 100%;
+    grid-template-columns: 1fr; }
+
+  .card_user {
+    border-radius: 1em;
+    background: #1c1f4a;
+    height: 340px;
+    width: 90%;
+    margin: auto; }
+    .card_user .card_user__name {
+      background: #6f76c8;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      border-radius: 1em;
+      padding: 1rem 0;
+      height: 60%; }
+      .card_user .card_user__name img {
+        border: 5px solid #fff;
+        border-radius: 50%;
+        width: 90px;
+        margin: 1rem; }
+      .card_user .card_user__name h3 {
+        margin: 0 2rem;
+        font-size: 2.5rem;
+        font-weight: 200;
+        opacity: .7; }
+      .card_user .card_user__name span {
+        margin: 0 2rem;
+        font-size: 1rem;
+        opacity: .7;
+        text-transform: lowercase; }
+    .card_user .card_user__frecuency {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-evenly;
+      height: 40%; }
+      .card_user .card_user__frecuency span {
+        opacity: .7;
+        font-size: 1.5rem;
+        margin: 0rem 0 2.5rem;
+        display: block; }
+      .card_user .card_user__frecuency span:hover {
+        opacity: 1;
+        cursor: pointer; }
+
+  .bg_card_icon {
+    height: 300px;
+    width: 90%;
+    margin: auto;
+    min-width: 325px;
+    border-radius: 1em;
+    position: relative;
+    overflow: hidden;
+    z-index: 3;
+    padding-top: .5rem; }
+    .bg_card_icon > img {
+      position: absolute;
+      right: 1rem;
+      top: -.5rem;
+      z-index: -1; }
+    .bg_card_icon .card_do {
+      z-index: 1;
+      margin-top: 2rem;
+      border-radius: 1em;
+      background: #1c1f4a;
+      padding: 1.5rem 2rem;
+      height: 78%; }
+      .bg_card_icon .card_do .card_do__options {
+        display: flex;
+        justify-content: space-between;
+        align-items: center; }
+        .bg_card_icon .card_do .card_do__options span {
+          font-size: 2rem; }
+      .bg_card_icon .card_do .card_do__hrs-frecuency {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%; }
+        .bg_card_icon .card_do .card_do__hrs-frecuency h1 {
+          margin: 1rem 0;
+          font-weight: 50;
+          font-size: 3rem; }
+        .bg_card_icon .card_do .card_do__hrs-frecuency span {
+          font-size: 1rem;
+          opacity: .7; } }
+
+/*# sourceMappingURL=styles.css.map */

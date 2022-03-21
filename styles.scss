@@ -1,0 +1,326 @@
+// The designs were created to the following widths:
+
+// - Mobile: 375px
+// - Desktop: 1440px
+
+// ## Colors
+
+// ### Primary
+
+$Blue:       hsl(246, 80%, 60%);
+$Light-orange:  hsl(15, 100%, 70%);
+$Soft-blue:  hsl(195, 74%, 62%);
+$Light-red:  hsl(348, 100%, 68%);
+$Lime-green: hsl(145, 58%, 55%);
+$Violet:     hsl(264, 64%, 52%);
+$Soft-yellow:hsl(43, 84%, 65%);
+
+// ### Neutral
+
+$Very-dark-blue:    hsl(226, 43%, 10%);
+$Dark-blue:         hsl(235, 46%, 20%);
+$Desaturated-blue:  hsl(235, 45%, 61%);
+$Pale-Blue:         hsl(236, 100%, 87%);
+
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital@1&display=swap');
+// - Family: [Rubik](https://fonts.google.com/specimen/Rubik)
+// - Weights: 300, 400, 500
+
+body {
+    font-size: 18px;
+    background: $Very-dark-blue;
+    margin: 0;
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    font-family: 'Rubik';
+} // (card titles e.g. Work, Play)
+
+main {
+    // border: 1px solid #fff;
+    min-height: 740px;
+    max-width: 1440px;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-rows: repeat(auto);
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.Work {
+    background: $Light-orange;
+}
+.Play{
+    background: $Soft-blue;
+}
+.Study {
+    background: $Light-red;
+}
+.Exercise {
+    background: $Lime-green;
+}
+.Social {
+    background: $Violet;
+}
+.Self, .Care {
+    background: $Soft-yellow;
+}
+
+.card_user {
+    border-radius: 1em;
+    background: $Dark-blue;
+    height: 740px;
+    min-width: 325px;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    .card_user__name {
+        background: $Desaturated-blue;
+        display: block;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 1em;
+        padding: 1rem 0;
+        height: 60%;
+        img {
+            border: 5px solid #fff;
+            border-radius: 50%;
+            width: 90px;
+            margin: 2rem;
+        }
+
+        h3 {
+            margin: 0 2rem;
+            font-size: 4rem;
+            font-weight: 200;
+            opacity: .7;
+        }
+        span {
+            margin: 0 2rem;
+            font-size: 1.5rem;
+            opacity: .7;
+            text-transform: lowercase;
+        }
+    }
+    .card_user__frecuency {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        justify-content: space-evenly;
+        height: 40%;
+        span {
+            opacity: .7;
+            font-size: 2rem;
+            margin: 0rem 0 2.5rem 3rem;
+            display: block;
+        }
+
+        span:hover {
+            opacity: 1;
+            cursor: pointer;
+        }
+
+        .active {
+            opacity: 1;
+            color: aquamarine;
+        }
+        
+    }
+}
+
+.bg_card_icon {
+    height: 350px;
+    width: 100%;
+    min-width: 325px;
+    border-radius: 1em;
+    position: relative;
+    overflow: hidden;
+    z-index: 3;
+    padding-top: .5rem;
+    >img {
+        position: absolute;
+        right: 1rem;
+        top: -.5rem;
+        z-index: -1;
+    }
+    .card_do {
+        z-index: 1;
+        margin-top: 2rem;
+        border-radius: 1em;
+        background: $Dark-blue;
+        padding: 1.5rem 2rem;
+        height: 78%;
+        
+        .card_do__options {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            span {
+                font-size: 2rem;
+            }
+            img:hover {
+                cursor: pointer;
+            }
+        }
+        .card_do__hrs-frecuency {
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            justify-content: space-between;
+            height: 70px;
+            h1 {
+                margin: 1rem 0;
+                font-weight: 50;
+                font-size: 6rem;
+            }
+            span {
+                font-size: 1.5rem;
+                opacity: .9;
+            }
+        }
+    }:hover{
+        background: $Desaturated-blue;
+        
+    }
+
+    
+}
+
+
+
+@media (max-width: 1440px) {
+    main {
+        width: 90%;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    
+}
+
+@media (max-width: 1125px) {
+    main {
+        width: 90%;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 800px) {
+    main {
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+
+    .card_user {
+        border-radius: 1em;
+        background: $Dark-blue;
+        height: 340px;
+        width: 90%;
+        margin: auto;
+
+        .card_user__name {
+            background: $Desaturated-blue;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            border-radius: 1em;
+            padding: 1rem 0;
+            height: 60%;
+            img {
+                border: 5px solid #fff;
+                border-radius: 50%;
+                width: 90px;
+                margin: 1rem;
+            }
+    
+            h3 {
+                margin: 0 2rem;
+                font-size: 2.5rem;
+                font-weight: 200;
+                opacity: .7;
+            }
+            span {
+                margin: 0 2rem;
+                font-size: 1rem;
+                opacity: .7;
+                text-transform: lowercase;
+            }
+        }
+        .card_user__frecuency {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-evenly;
+            height: 40%;
+            span {
+                opacity: .7;
+                font-size: 1.5rem;
+                margin: 0rem 0 2.5rem;
+                display: block;
+            }
+    
+            span:hover {
+                opacity: 1;
+                cursor: pointer;
+            }
+            
+        }
+    }
+
+    .bg_card_icon {
+        height: 300px;
+        width: 90%;
+        margin: auto;
+        min-width: 325px;
+        border-radius: 1em;
+        position: relative;
+        overflow: hidden;
+        z-index: 3;
+        padding-top: .5rem;
+        >img {
+            position: absolute;
+            right: 1rem;
+            top: -.5rem;
+            z-index: -1;
+        }
+        .card_do {
+            z-index: 1;
+            margin-top: 2rem;
+            border-radius: 1em;
+            background: $Dark-blue;
+            padding: 1.5rem 2rem;
+            height: 78%;
+            .card_do__options {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                span {
+                    font-size: 2rem;
+                }
+            }
+            .card_do__hrs-frecuency {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                height: 100%;
+                h1 {
+                    margin: 1rem 0;
+                    font-weight: 50;
+                    font-size: 3rem;
+                }
+                span {
+                    font-size: 1rem;
+                    opacity: .7;
+                }
+            }
+        }
+    }
+}
+
+
+
+// ### Font
