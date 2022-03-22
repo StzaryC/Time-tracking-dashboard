@@ -1,9 +1,3 @@
-/* 
-<span id="daily">Daily</span> 
-<span id="weekly">Weekly</span> 
-<span id="monthly">Monthly</span>
-*/
-
 fetch('data.json')
     .then(response => response.json())
     .then(data => {
@@ -130,36 +124,9 @@ fetch('data.json')
             btnDaily.classList.remove("active")
             btnWeekly.classList.remove("active")
             btnMonthly.classList.add("active")
-        };  
-        
+        };   
     });
-
-    
-      
-
-
   });
-
   let btnDaily = document.getElementById("daily")
   let btnWeekly = document.getElementById("weekly")
   let btnMonthly = document.getElementById("monthly")
-
-  
-
-  
-
-
-{/* <div class="bg_card_icon Work" id="work">
-    <img src="images/icon-work.svg" alt="">
-    <div class="card_do">
-        <div class="card_do__options">
-          <span class="title">Work</span>
-          <img src="images/icon-ellipsis.svg" alt="">
-        </div>
-        <div class="card_do__hrs-frecuency">
-          <h1 class="current_hrs">32hr</h1>
-          <span class="last_record">Last-Week - 36hrs</span>
-        </div>
-    </div>
-</div> */}
-
